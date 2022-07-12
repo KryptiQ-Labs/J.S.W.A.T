@@ -4,16 +4,26 @@
 
 Title: J.S.W.A.T - JavaScript Web Application Template
 
-Description: A custom JavaScript web application template utilizing various technologies and libraries.
-J.S.W.A.T makes it easy to incorporate full stack application technologies if a simple front-end application isn't required. 
-A complete project folder structure is set up with both "Frontend" & "Backend" directories within the main "Application" directory.
-A few other resources are included like .gitignore, config.env, README.md, Documentation.md, Licence.md, a package.json which holds a template to the basic dependency collection J.S.W.A.T utilizes and an application_main.js file as the server entry point. Links to documentation and guides are specified below in the "Docs" section for extra insight.
+Description:  Designed & developed for JS lovers, by an aspiring JS enthusiast.
+              A custom, fun, easy-to-use JavaScript web application starter template utilizing various technologies and libraries.
+              J.S.W.A.T makes it easy to incorporate full stack application technologies if a simple front-end application isn't enough.
+              Designed for any JS lover and makes it easy to implement a user-friendly development environment. 
+              A complete project folder structure is set up with both "Frontend" & "Backend" directories within the main "Application" directory.
+              A few other resources are included like .gitignore, config.env, README.md, Licence.md, a package.json which holds a template to the                                     basic dependency collection J.S.W.A.T utilizes and an application_main.js file as the server entry point. 
+              Links to documentation and guides are specified below in the "Docs" section for extra insight.
+              A J.S.W.A.T NPM Generator will soon be released after proper use and licencing of the template project.
 
 Tech Stack: Node.js for the backend & EJS(Embedded JavaScript) for the frontend. 
 
 Dependency Stack: cors, dotenv, morgan, body-parser, nodemon
 
-Frameworks/Libraries/Dependancies Utilized: Bootstrap.css, jQuery,
+Frameworks/Libraries/Dependancies Utilized: Bootstrap.css, jQuery, W3Schools-css
+
+HINTS:
+------
+1. Always go back to the docs if you get stuck.
+2. You can always reach out to the developer via kryptiqlabs.dev@gmail.com for any issues or bug reports.
+3. Always make sure your application secrets, keys, URL's and sensitive data is protected and hidden inside your config.env file.
 
 INSTRUCTIONS:
 ---------------------------
@@ -26,6 +36,7 @@ CONTENTS:
 5. STEP 5 - INSTALL DEPENDENCIES
 6. STEP 6 - RUN YOUR APPLICATION
 7. STEP 7 - OPEN YOUR APPLICATION IN YOUR BROWSER
+8. STEP 8 - (OPTIONAL) REVIEW DOCS
 
 STEP 1: Clone repository to desired local machine/directory, preferably the Desktop for ease of access.
   -->   Open a terminal (GitBash, Powershell, CMD).
@@ -57,4 +68,15 @@ PORT: 3000
 /**                              **/
 
 STEP 7: Navigate to you browser and type or copy URL http://localhost:3000 and paste it into your search bar. When the browser has successfully loaded you should see the following page and you're set to GO. ENJOY!
+
+STEP 8: Below is a list of docs for all the technologies implemented in J.S.W.A.T for your convenience:
+
+1. J.S.W.A.T Documentation - https://mywebsitehere.co.za
+2. NODE.JS Documentation - https://nodejs.org/en/docs/
+3. EJS Documentation - https://ejs.co/
+4. NPM Dependencies Documentation - https://www.npmjs.com/
+5. BOOTSTRAP Documentation - https://getbootstrap.com/docs/5.2/getting-started/introduction/
+6. W3SCHOOLS-CSS Documentation - https://www.w3schools.com/w3css/default.asp
+7. jQUERY Documentation - https://learn.jquery.com/
+
 

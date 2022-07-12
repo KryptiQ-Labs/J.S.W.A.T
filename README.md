@@ -1,5 +1,8 @@
 # J.S.W.A.T
-J.S.W.A.T - JavaScript Web Application Template
+
+######WARNING!!! --> THIS PROJECT IS STILL UNDER DEVELOPMENT! DO NOT DOWNLOAD ANY FILES AS THERE ARE STILL POTENTIAL VULNERABILITIES BEING RESOLVED! <--######
+
+Title: J.S.W.A.T - JavaScript Web Application Template
 
 Description: A custom JavaScript web application template utilizing various technologies and libraries.
 J.S.W.A.T makes it easy to incorporate full stack application technologies if a simple front-end application isn't required. 

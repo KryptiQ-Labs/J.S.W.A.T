@@ -40,20 +40,21 @@ STEP 4: Open up a terminal, in VS Code use press and hold "Ctrl" and "~" (Tilde)
 STEP 5: There is no need to initialize a project config with "npm init -y", this is already done for you. Just install the dependencies you see in the package.json file and you're good to go!
 
 STEP 6: Run your application. In your terminal type or copy command "npm start". If your application started successfully, the following event message should be displayed in your terminal otherwise go back to STEP 1 and try again, CAREFULLY! 
-                                  /** SUCCESSFUL APPLICATION START
-                                  > application@1.0.0 start    
-                                  > nodemon application_main.js
 
-                                  [nodemon] 2.0.19
-                                  [nodemon] to restart at any time, enter `rs`
-                                  [nodemon] watching path(s): *.*
-                                  [nodemon] watching extensions: js,mjs,json
-                                  [nodemon] starting `node application_main.js`
-                                  Application successfully deployed to Local Development Server,
-                                  Server connection open, listening on
-                                  HOST: localhost
-                                  PORT: 3000
-                                  **/
+/** SUCCESSFUL APPLICATION START **/
+> application@1.0.0 start    
+> nodemon application_main.js
+
+[nodemon] 2.0.19
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node application_main.js`
+Application successfully deployed to Local Development Server,
+Server connection open, listening on
+HOST: localhost
+PORT: 3000
+/**                              **/
 
 STEP 7: Navigate to you browser and type or copy URL http://localhost:3000 and paste it into your search bar. When the browser has successfully loaded you should see the following page and you're set to GO. ENJOY!
 

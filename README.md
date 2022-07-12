@@ -20,7 +20,9 @@ INSTALLATION REQUIREMENTS:
 
 Tutorial:
 ----------
-STEP 1: Clone repository to desired local machine/directory, preferably the Desktop for ease of access.     -->     git clone "REPO-URL-HERE".
+STEP 1: Clone repository to desired local machine/directory, preferably the Desktop for ease of access.
+  -->   Open a terminal (GitBash, Powershell, CMD).
+  -->   Type or copy: git clone "https://github.com/KryptiQ-Labs/J.S.W.A.T.git".
 
 STEP 2: Install the latest version of Node.js from https://www.nodejs.org/en/. (SKIP IF ALREADY INSTALLED)
 

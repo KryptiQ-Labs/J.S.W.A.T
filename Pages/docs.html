@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--metaData-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--favicon-->
+    <link rel="shortcut icon" href="/Public/Favicons/jswat-favicon.png" type="image/x-icon">
+    <!--W3|CSS-&-BOOTSTRAP|CSS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--Font-Awesome-Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>The J.S.W.A.T Docs</title>
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Poppins", sans-serif
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+        .w3-half img {
+            margin-bottom: -6px;
+            margin-top: 16px;
+            opacity: 0.8;
+            cursor: pointer
+        }
+
+        .w3-half img:hover {
+            opacity: 1
+        }
+
+        a:hover {
+            transition: all 250ms ease;
+        }
+
+        .fx-scale:hover {
+            transform: scale(1.2);
+            transition: all 250ms ease-in-out;
+        }
+
+        .img-scale:hover {
+            transform: scale(1.3);
+            transition: all 250ms ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="w3-animate-zoom" style="background: rgb(22, 22, 22);">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-text-white w3-top w3-large w3-padding w3-animate-zoom"
+        style="z-index:3;width:300px;font-weight:bold; background: radial-gradient(black,green);" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <a href="/Pages/index.html" class="w3-margin w3-button w3-hover-white w3-card-4 w3-padding-large"><i
+                    class="fas fa-arrow-left fa-fw"></i> Back Home</a>
+            <h3 class="w3-padding-large w3-margin-left"><b>The J.S.W.A.T Docs</b> <i class="fas fa-book fa-fw"></i></h3>
+            <!-- <img class="w3-round w3-card-4 w4-right" src="/Public/Images/jswat-logo.png" alt="" style="height: 50px; "> -->
+        </div>
+        <div class="w3-bar-block w3-text-white">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">TOP <i
+                    class="fas fa-arrow-up-long fa-fw"></i></a>
+            <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a>
+            <a href="#skills" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">What you should already
+                know</a>
+            <a href="#prerequisites" onclick="w3_close()"
+                class="w3-bar-item w3-button w3-hover-white">Pre-requisites</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button w3-bar-item">Getting Started (Windows)</button>
+                <div class="w3-dropdown-content w3-bar-block w3-border w3-dark-grey">
+                    <a href="#getStarted" class="w3-bar-item w3-button w3-text-green">J.S.W.A.T Directory Tree</a>
+                    <a href="#install-node" class="w3-bar-item w3-button w3-text-green">Download & Install Node.js</a>
+                    <a href="#install-git" class="w3-bar-item w3-button w3-text-green">Download & Install Git</a>
+                    <a href="#install-vscode" class="w3-bar-item w3-button w3-text-green">Download & Install VS Code</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button w3-bar-item">Getting Started (MAC-OS)</button>
+                <div class="w3-dropdown-content w3-bar-block w3-border w3-dark-grey">
+                    <a href="#getStarted" class="w3-bar-item w3-button w3-text-green">J.S.W.A.T Directory Tree</a>
+                    <a href="#install-node" class="w3-bar-item w3-button w3-text-green">Download & Install Node.js</a>
+                    <a href="#install-git" class="w3-bar-item w3-button w3-text-green">Download & Install Git</a>
+                    <a href="#install-vscode" class="w3-bar-item w3-button w3-text-green">Download & Install VS Code</a>
+                </div>
+            </div>
+            <a href="#download" class="w3-bar-item w3-button w3-hover-white">Download the J.S.W.A.T Template</a>
+            <a href="#open" class="w3-bar-item w3-button w3-hover-white">Open the J.S.W.A.T Template</a>
+            <a href="#navigate" class="w3-bar-item w3-button w3-hover-white">Terminal/cli
+                navigation</a>
+            <a href="#build" class="w3-bar-item w3-button w3-hover-white">Build & Compile</a>
+            <a href="#deployLocal" class="w3-bar-item w3-button w3-hover-white">Deploy & Open</a>
+            <a href="#happyCoding" class="w3-bar-item w3-button w3-hover-white">Happy Coding! <i
+                    class="fas fa-glasses fa-fw"></i> </a>
+            <a href="#tutorial" class="w3-bar-item w3-button w3-hover-white">J.S.W.A.T Tutorial - Build a To-Do List</a>
+            <a href="#deployWeb" class="w3-bar-item w3-button w3-hover-white">Deploy your app with
+                Heroku</a>
+            <a href="#extras" class="w3-bar-item w3-button w3-hover-white">Extra Resources</a>
+            <a href="#references" class="w3-bar-item w3-button w3-hover-white">References &
+                Credits</a>
+            <a href="#feedback" class="w3-bar-item w3-button w3-hover-white">Feedback &
+                Suggestions</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>The J.S.W.A.T Docs <i class="fas fa-book fa-fw"></i></span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-xxxlarge w3-text-white"><b>The J.S.W.A.T Documentation</b> <img
+                    class="w3-round w3-card-4 w4-right" src="/Public/Images/jswat-logo.png" alt=""
+                    style="height: 50px; ">
+            </h1>
+            <div style="display: inline-flex;">
+                <img class="w3-round w3-card-4 w4-right w3-margin" src="/Public/Images/jswat-banner.jpg" alt=""
+                    style="height: 250px; ">
+                <img class="w3-round w3-card-4 w4-right w3-margin" src="/Public/Images/jswat-logo.png" alt=""
+                    style="height: 250px; ">
+            </div>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+
+
+        <!-- introduction -->
+        <div class="w3-container" id="introduction" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Introduction</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+                    <p>Built for JS lovers, by a young, aspiring JS enthusiast, <a href="#">Muhammed
+                            Shaaqir Abrahams</a>.</p>
+                    <p>J.S.W.A.T is an on-going Open-Source project for the community to enjoy it's fun and easy
+                        implementation on JavaScript based websites. Built and based on the JavaScript template engine
+                        "EJS" and the scalable V8 Node.js engine.</p>
+                    <p> A custom, fun, easy-to-use, free-to-use JavaScript web application starter template utilizing
+                        various technologies and libraries. J.S.W.A.T makes it easy to incorporate full stack
+                        application
+                        technologies if a simple front-end application isn't enough. Designed for any JS lover and makes
+                        it
+                        easy to implement a user-friendly, On-The-Go development environment. The template was designed
+                        with
+                        the MVC-2(Models, Views, Components & Controllers) design & development approach, making it easy
+                        to work and
+                        navigate through the project structure and implement a web application.</p>
+                    </p>
+                    <p>A complete project folder structure is set up with both "Frontend" & "Backend" directories within
+                        the
+                        main "Application" directory. Don't let the J.S.W.A.T Directory Tree scare you with a complex
+                        but efficient project structure. Loads of extra resources are included, making dependency and
+                        external library management a breeze.</p>
+                    <p>NOTE: This documentation and its' guides are complete and detailed and by no means short, but
+                        definetely simple! If there is anyting not
+                        understood or should be mentioned, feel free to contact us from the <a
+                            href="/Pages/index.html">Home page</a>.</p>
+                    <p>There are 2 ways to download a J.S.W.A.T Starter Template, mainly:</p>
+                    <ol>
+                        <li>The GitHub Template downloaded directly from the <a
+                                href="https://github.com/msabrahams711">GitHub
+                                Website</a> .</li>
+                        <li>The NPM Template generated directly from the <a href="https://www.npmjs.com/">NPM Tool -
+                                J.S.W.A.T-GenX</a> .</li>
+                    </ol>
+                </article>
+            </section>
+        </div>
+        <!-- /introduction -->
+
+
+
+        <!-- skills -->
+        <div class="w3-container" id="skills" style="margin-top:75px; padding-bottom: 150px; margin-bottom: 150px;">
+            <h1 class="w3-xxxlarge w3-text-green"><b>What you should already know</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+                    <p>This guide assumes you have the following basic background:</p>
+                    <ul>
+                        <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                        <li>Good knowledge of HTML5, CSS3, JavaScript, EJS, Node.js, Express.js.</li>
+                        <li>Good knowledge of the MVC(Model, View, Controller) development approach.</li>
+                        <li>Good knowledge of Backend technologies, API's and RESTful services.</li>
+                        <li>Good knowledge of version & source code control with Github/GitBash.</li>
+                        <li>Some programming experience. If you are new to programming and web development,
+                            we have created a <a href="#">guided course</a> which combines the several different web
+                            technologies & languages we use in the J.S.W.A.T Template design.</li>
+                </article>
+            </section>
+        </div>
+        <!-- /skills -->
+
+
+
+        <!-- prerequisites -->
+        <div class="w3-container" id="prerequisites" style="margin-top:75px; padding-bottom: 50px;">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Pre-requisites</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section class="w3-text-green">
+                <article>
+                    <p>The following are required to build and run a J.S.W.A.T Starter Template:</p>
+                    <h3 class="w3-text-red">Technologies: </h3>
+                    <ol>
+                        <li>Node.js - For our backend & frontend</li>
+                        <li>NPM - For our package & dependency management</li>
+                        <li>Git - For our version & source control</li>
+                        <li>Visual Studio Code - For our powerful development environment</li>
+                        <li>Don't worry if you don't know how to install the above, the below guides will show you how.
+                        </li>
+                    </ol>
+                    <h3 class="w3-text-red">Accounts: </h3>
+                    <ol>
+                        <li>A GitHub Account - A platform to access version & source control features.</li>
+                        <li>A Heroku Account - A platform to deploy web-based applications.</li>
+                        <li>Don't worry if you don't know how to install the above, the below guides will show you how.
+                        </li>
+                    </ol>
+                </article>
+
+            </section>
+        </div>
+        <!-- /prerequisites -->
+
+
+
+        <!-- getting-started -->
+        <div class="w3-container" id="getStarted" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Getting Started</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+                    <h3>The J.S.W.A.T MVC-2 Directory Tree: </h3>
+                    <br>
+                    <div class="w3-center w3-padding-large w3-margin" style="display: flex; flex-wrap: wrap;"
+                        style="margin-left: 200px;">
+                        <p>A detailed description of the directory tree and it's structure follows <a
+                                href="#tree">below</a>.</p>
+                        <h3>The following views describe the directory tree:</h3>
+                        <div class="w3-margin">
+                            <label for="">Default:</label>
+                            <br>
+
+                            <img class="w3-round w3-card-4 w3-margin img-scale"
+                                src="/Public/Images/tree-guide-default.png" alt="">
+                        </div>
+
+                        <div class="w3-margin">
+                            <label for="">Expanded:</label>
+                            <br>
+                            <img class="w3-round w3-card-4 w3-margin img-scale"
+                                src="/Public/Images/tree-guide-expand.png" alt="">
+                        </div>
+
+                        <br>
+
+                        <div class="w3-margin">
+                            <label for="">Backend:</label>
+                            <br>
+                            <img class="w3-round w3-card-4 w3-margin img-scale"
+                                src="/Public/Images/tree-guide-backend.png" alt="">
+                        </div>
+
+                        <div class="w3-margin">
+                            <label for="">Frontend:</label>
+                            <br>
+                            <img class="w3-round w3-card-4 w3-margin img-scale"
+                                src="/Public/Images/tree-guide-frontend.png" alt="">
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div id="tree">
+                        <h3>Directory Tree Guide:</h3>
+                        <div class="w3-padding-large w3-margin w3-card-4 w3-round w3-white">
+                            <p class="w3-xxlarge w3-text-orange">LEGEND:</p>
+                            <p>TAG: The tag here specifies the folder or namespace in the directory tree. <br>
+                                <p>DESCRIPTION: The description here specifies and provides details about the relative
+                                    TAG
+                                    in the directory tree. <br>
+                                    <p>TAG-COLOR: The color here will determine whether a TAG is: <br>
+                                        <li>Backend: YELLOW <i class="fas fa-circle fa-fw w3-xlarge w3-text-yellow"></i>
+                                        </li>
+                                        <li>Frontend: BLUE <i class="fas fa-circle fa-fw w3-xlarge w3-text-blue"></i>
+                                        </li>
+                                    </p>
+                                    <br>
+                                    <p><i class="fas fa-circle fa-fw w3-text-yellow"></i>
+                                        BACKEND: The root/parent folder for all your backend/server-side code logic &
+                                        resources.
+                                    </p>
+                                    <p><i class="fas fa-circle fa-fw w3-text-yellow"></i> API:
+                                        The root/parent folder for your Controllers, Renders & Routers.</p>
+                                    <li>Sub-Directory - CONTROLLERS: The folder for creating your code logic for
+                                        business logic
+                                        & API definitions.</li>
+                                    <li>Sub-Directory - RENDERS: The folder for creating your code logic for dynamically
+                                        rendering API routes.</li>
+                                    <li>Sub-Directory - ROUTERS: The folder for creating your code logic for defining
+                                        API &
+                                        website routes.</li>
+
+                                    <p><i class="fas fa-circle fa-fw w3-text-yellow"></i> DB:
+                                        The root/parent folder for your Configs, Connection & Models.</p>
+                                    <li>Sub-Directory - CONFIGS: The folder for creating your code logic for Database
+                                        configurations (NOTE: NOT FOR APP_SECRETS!).</li>
+                                    <li>Sub-Directory - CONNECTION: The folder for creating code logic for your Database
+                                        connections.</li>
+                                    <li>Sub-Directory - MODELS: The folder for your creating code logic for Database
+                                        schemas &
+                                        models.</li>
+
+                                    <hr class="w3-text-black w3-center" style="width: 100%; border: 1px solid #000;">
+
+                                    <p><i class="fas fa-circle fa-fw w3-text-blue"></i>
+                                        FRONTEND: The root/parent folder for all your frontend/client-side code logic &
+                                        resources.</p>
+                                    <p><i class="fas fa-circle fa-fw w3-text-blue"></i> ASSETS:
+                                        The root/parent folder for your CDNX, Effects, Favicon, Images & Styles.</p>
+                                    <li>Sub-Directory - CDNX: Contains a static file with all necessary CDN
+                                        libraries/dependencies for webpages.</li>
+                                    <li>Sub-Directory - Effects: Contains JS/jQuery functions/effects for webpages.</li>
+                                    <li>Sub-Directory - Favicon: Contains a default website icon(logo) for webpages.
+                                    </li>
+                                    <li>Sub-Directory - Images: Contains images for use on webpages.</li>
+                                    <li>Sub-Directory - Styles: Contains CSS styles for use on webpages.</li>
+                                    <p></i> <i class="fas fa-circle fa-fw w3-text-blue"></i>
+                                        COMPONENTS: The root/parent folder for your Custom, J.S.W.A.T-X & Main component
+                                        library.</p>
+                                    <li>Sub-Directory - Custom: Contains custom and self-created EJS components.</li>
+                                    <li>Sub-Directory - J.S.W.A.T-X: Contains J.S.W.A.T-X EJS components.</li>
+                                    <li>Sub-Directory - Main: Contains the Main EJS components.</li>
+                                    <p><i class="fas fa-circle fa-fw w3-text-blue"></i>
+                                        SERVICES: The root/parent folder for your frontend/client-side web services &
+                                        logic.</p>
+                                    <p><i class="fas fa-circle fa-fw w3-text-blue"></i>
+                                        VIEWS: The root/parent folder for your Custom & Main views.</p>
+                                    <li>Root-Directory - Main(unnamed): Contains default application views and pages.
+                                    </li>
+                                    <li>Sub-Directory - Custom: Contains custom views and pages.</li>
+                        </div>
+
+                    </div>
+
+                    <!--NODE-START-->
+                    <article id="install-node">
+
+                        <h3>Download & Install Node.js (Windows)</h3>
+                        <p>As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable
+                            network
+                            applications.</p>
+                        <ul>
+                            <li>Go to <a href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a> (opens
+                                a new tab automatically).</li>
+                            <li>As below, select the "Current" version which should be the latest, at this point in time
+                                Node.js v18.5.0.</li>
+                            <img class="w3-round w3-card-4 w3-margin" src="/Public/Images/node-guide-download.png"
+                                alt="" style="height: 220px;">
+                            <li>When the download is complete, open the installation file and follow the prompts until
+                                completion.</li>
+                            <img class="w3-round w3-card-4 w3-margin" src="/Public/Images/node-guide-install.png" alt=""
+                                style="width: 460px;">
+                            <li>You can now verify your Node.js installation by navigating to your terminal, we will use
+                                the windows *Wildcard for "Run", Press and hold ("Windows-Key" + "R-Key"). A dialog
+                                should appear, then type "cmd" if you prefer the native windows shell or type
+                                "powershell" if you have Windows Powershell installed. Once you have typed
+                                your command hit "ENTER", then copy or type the command: <b class="w3-text-red">"node
+                                    --version"</b>
+                                <br><br>
+                                <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                                    style="display: inline-block; width: 600px; flex-wrap: wrap; ">
+                                    node --version
+                                </code>
+                                <br><br>
+                            </li>
+                            <li>The following should be displayed in your terminal after the command has been executed:
+                                <br><br>
+                                <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                                    style="display: inline-block; width: 600px; flex-wrap: wrap; ">
+                                    C:\Users\kryptiq-labs.dev> node --version
+                                    <br>
+                                    v18.5.0
+                                </code>
+                                <br><br>
+                            </li>
+                            <li>By default, the NPM package & dependency tool will be installed with Node.js. For more
+                                information about
+                                Node.js go to <a href="https://nodejs.org/en/docs/">https://nodejs.org/en/docs/</a></li>
+                            <li>You're ready for the next step! Let's download and install Git.</li>
+                        </ul>
+                    </article>
+                    <!--/NODE-END-->
+
+                    <br><br>
+
+                    <!--GIT-START-->
+                    <article id="install-git">
+
+                        <h3>Download & Install Git (Windows)</h3>
+                        <p>Git is a free and open source distributed version control system designed to handle
+                            everything from small to very large projects with speed and efficiency. Git is easy to learn
+                            and has a tiny footprint with lightning fast performance. It outclasses SCM tools like
+                            Subversion, CVS, Perforce, and ClearCase with features like cheap local branching,
+                            convenient staging areas, and multiple workflows.</p>
+                        <ul>
+                            <li>Go to <a href="https://git-scm.com/downloads/"
+                                    target="_blank">https://git-scm.com/downloads/</a> (opens a new tab automatically).
+                            </li>
+                            <li>As below, select the "Latest Source Release" which should be the latest version, at this
+                                point in time
+                                Git v2.37.1 .</li>
+                            <img class="w3-round w3-card-4 w3-margin" src="/Public/Images/git-guide-download.png" alt=""
+                                style="height: 220px;">
+                            <li>As below, select the appropriate Windows setup.</li>
+                            <img class="w3-round w3-card-4 w3-margin" src="/Public/Images/git-guide-download2.png"
+                                alt="" style="height: 220px;">
+                            <li>When the download is complete, open the installation file and follow the prompts until
+                                completion.</li>
+                            <img class="w3-round w3-card-4 w3-margin" src="/Public/Images/git-guide-install.png" alt=""
+                                style="width: 460px;">
+                            <li>You can now verify your Git installation by navigating to your terminal, we will use
+                                the windows *Wildcard for "Run", Press and hold ("Windows-Key" + "R-Key"). A dialog
+                                should appear, then type "cmd" if you prefer the native windows shell or type
+                                "powershell" if you have Windows Powershell installed. Once you have typed
+                                your command hit "ENTER", then copy or type the command: <b class="w3-text-red">"git
+                                    --version"</b>
+                                <br><br>
+                                <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                                    style="display: inline-block; width: 600px; flex-wrap: wrap; ">
+                                    git --version
+                                </code>
+                                <br><br>
+                            </li>
+                            <li>The following should be displayed in your terminal after the command has been executed:
+                                <br><br>
+                                <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                                    style="display: inline-block; width: 600px; flex-wrap: wrap; ">
+                                    C:\Users\kryptiq-labs.dev>git --version
+                                    <br>
+                                    git version 2.37.1.windows.1
+                                </code>
+                                <br><br>
+                            </li>
+                            <li>By default, the GitBash cli tool will be installed with Git. For more information about
+                                GitBash go to <a
+                                    href="https://www.atlassian.com/git/tutorials/git-bash">https://www.atlassian.com/git/tutorials/git-bash</a>
+                            </li>
+                            <li>You're ready for the next step! Let's download and Visual Studio Code.</li>
+                        </ul>
+                    </article>
+                    <!--/GIT-END-->
+                    <br><br>
+
+                    <!--VS-CODE-START-->
+                    <article id="install-vscode">
+
+                        <h3>Download & Install Visual Studio Code (Windows)</h3>
+                        <p>VS-Code is free IDE, built on open source by Microsoft and runs literally everywhere! It has
+                            very intelligent and cool features which range from syntax highlighting, intellisense(code
+                            auto-complete), built-in Git commands and is fully customizable and integratable with many
+                            technologies and languages out there!</p>
+                        <ul>
+                            <li>Go to <a href="https://code.visualstudio.com/"
+                                    target="_blank">https://code.visualstudio.com/</a> (opens a new tab automatically).
+                            </li>
+                            <li>As below, select the "Stable Build" which should be the latest version, at this
+                                point in time
+                                Visual Studio Code v1.69.1 .</li>
+                            <img class="w3-round w3-card-4 w3-margin" src="/Public/Images/vscode-guide-download.png"
+                                alt="" style="height: 220px;">
+                            <li>When the download is complete, open the installation file and follow the prompts until
+                                completion.</li>
+                            <img class="w3-round w3-card-4 w3-margin" src="/Public/Images/vscode-guide-install.png"
+                                alt="" style="width: 460px;">
+                            <li>You can now verify your Vusiaul Studio Code installation by navigating to your terminal,
+                                we will use
+                                the windows *Wildcard for "Run", Press and hold ("Windows-Key" + "R-Key"). A dialog
+                                should appear, then type "cmd" if you prefer the native windows shell or type
+                                "powershell" if you have Windows Powershell installed. Once you have typed
+                                your command hit "ENTER", then copy or type the command: <b class="w3-text-red">"code
+                                    --version"</b>
+                                <br><br>
+                                <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                                    style="display: inline-block; width: 600px; flex-wrap: wrap; ">
+                                    code --version
+                                </code>
+                                <br><br>
+                            </li>
+                            <li>The following should be displayed in your terminal after the command has been executed:
+                                <br><br>
+                                <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                                    style="display: inline-block; width: 600px; flex-wrap: wrap; ">
+                                    C:\Users\kryptiq-labs.dev>code --version
+                                    <br>
+                                    1.69.1 <div></div>
+                                    b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a <div></div>
+                                    x64
+                                </code>
+                                <br><br>
+                            </li>
+                            <li>For more information about
+                                VS Code go to <a
+                                    href="https://code.visualstudio.com/docs">https://code.visualstudio.com/docs</a>
+                            </li>
+                            <li>You're ready for the next step! Let's setup the required accounts.</li>
+                        </ul>
+                    </article>
+                    <!--/VS-CODE-END-->
+                    <br><br>
+
+                    <article id="">
+                        <h3>Accounts setup:</h3>
+
+
+                        <h4>Setting up an account is easy and does not require a guide here, however if you do struggle,
+                            each website will have guides and tutorials to create and setup accounts.</h4>
+                        <p>The following is what you need to do:</p>
+                        <ol>
+                            <li>Create a Google account: Go to the <a
+                                    href="https://www.google.com/account/about/?hl=en-US">Google Portal</a> and hit the
+                                "Create an account" button. <br>
+                                <p class="w3-text-red">(NOTE: If you already have an account SKIP this step.)</p>
+                            </li>
+                            <li>Create a GitHub account: Go to the <a href="https://www.github.com/">GitHub Portal</a>
+                                and
+                                hit the "Sign Up" button. <br>
+                                <p class="w3-text-red">(NOTE: If you already have an account SKIP this step.)</p>
+                            </li>
+                            <li>Create a Heroku account: Go to the <a href="https://www.heroku.com/">Heroku Portal</a>
+                                and
+                                hit the "Sign Up" button. <br>
+                                <p class="w3-text-red">(NOTE: If you already have an account SKIP this step.)</p>
+                            </li>
+                        </ol>
+                    </article>
+
+                </article>
+            </section>
+        </div>
+        <!-- /getting-started -->
+
+
+
+        <!-- download -->
+        <div class="w3-container" id="download" style="margin-top:75px; padding-bottom: 100px;">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Download the J.S.W.A.T Starter Template</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+                    <p>To get started, you can download the J.S.W.A.T Starter Template from the <a
+                            href="/Pages/downloads.html">J.S.W.A.T website</a> in the downloads section.
+                    </p>
+                    <p>There are 2 options to download and all are available on the website which include:</p>
+                    <ol>
+                        <li>A GitHub Template</li>
+                        <li>An NPM Template</li>
+                    </ol>
+                    <br>
+                    <div class="w3-center w3-margin">
+                        <a href="/Pages/downloads.html"
+                            class="w3-padding-large w3-button w3-orange w3-round w3-card-4">Download J.S.W.A.T Starter
+                            Template
+                            <i class="fas fa-download fa-fw "></i></a>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <!-- /download -->
+
+
+
+        <!-- open -->
+        <div class="w3-container" id="open" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Open the J.S.W.A.T Starter Template</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+                    <p>To get started, open up Visual Studio Code, this is will be our default IDE(Integrated
+                        Development
+                        Environment). <br>
+                        Also take note that the desktop is the prefered location to store the template when starting
+                        out.
+                    </p>
+                    <p>Depending on which download option you have selected, here's how to open each one:</p>
+                    <ol>
+                        <li>The GitHub Template - Simply extract the zip and drag the folder into VS Code.</li>
+                        <li>The NPM Template - While in VS Code, open up a terminal with *Wildcard ("Ctrl" + "~"), type
+                            the following command:</li>
+                        <br>
+                        <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                            style="display: inline-block; width: 600px; flex-wrap: wrap; ">
+                            npm i jswat-genx
+                        </code>
+                        <br>
+                        <p>The following will be displayed after npm has successfully run your command:</p>
+                    </ol>
+                </article>
+            </section>
+        </div>
+        <!-- /open -->
+
+
+        <!--terminal-->
+        <div class="w3-container" id="navigate" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Terminal/command-line navigation</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+
+                    <ul>
+                        <li>
+                            <p>Here are a few key commands you will be using and what they are: </p>
+                        </li>
+                        <li>
+                            <p>The "npm" prefix is used to access the npm package manager instance.</p>
+                        </li>
+                        <li>
+                            <p>The "-i" prefix is used to install a package/dependency.</p>
+                        </li>
+                        <li>
+                            <p>The "-s" prefix is used to save a package/dependency when installing one.</p>
+                        </li>
+                        <li>
+                            <p>The complete command for installing a package/dependency is "npm -i -s [packageName]".
+                            </p>
+                        </li>
+                        <li>
+                            <p>The "start" prefix is used to start a project through node.js and npm on your local
+                                server.</p>
+                        </li>
+                        <li>
+                            <p>The complete command for starting your project on your local server is "npm start".</p>
+                        </li>
+                        <li>
+                            <p>There are more commands and prefixes to use on the npm website, for now, that's all we
+                                need.</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </div>
+        <!-- /terminal -->
+
+
+
+        <!--build-->
+        <div class="w3-container" id="build" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Build & Complie</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+
+                    <ul>
+                        <li>
+                            <p>Here we will use NPM to inject our dependencies into our project.</p>
+                        </li>
+                        <li>
+                            <p>It is not required that you install any of the dependencies in your "package.json" file,
+                                Node.js & NPM will scan this automatically when we inject the dependencies.</p>
+                        </li>
+
+                        <li>
+                            <p>Make sure you are in the current directory as followed in the <a
+                                    href="#download">download</a> section: <br>
+                                "C:\Users\kryptiq-labs.dev\Desktop\J.S.W.A.T\Application" .</p>
+                        </li>
+                        <li>
+                            <p>Where "kryptiq-labs.dev" will be your own PC_Name.</p>
+                        </li>
+                        <li>
+                            <p>Where "Desktop" will be your desired save location.</p>
+                        </li>
+                        <li>
+                            <p>Where "Application" will be your default/custom app name.</p>
+                        </li>
+                        <li>
+                            <p>Where "C:\Users\kryptiq-labs.dev\Desktop\J.S.W.A.T\Application" will be your root project
+                                directory.</p>
+                        </li>
+                    </ul>
+                    <h3>Let's start the dependency-build:</h3>
+                    <ol>
+                        <li>In your terminal, as shown below, enter the command <b class="w3-text-red">"npm install"</b>
+                        </li>
+                        <br>
+                        <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                            style=" width: 600px; flex-wrap: wrap; ">
+                            C:\Users\kryptiq-labs.dev\Desktop\J.S.W.A.T\Application>npm install
+
+                        </code>
+                        <br>
+                        <br>
+                        <li>The build should take a few minutes, let's create our application-secrets file so we can
+                            deploy our project to the local server:
+                        </li>
+                        <ul>
+                            <li>In your root directory, that is
+                                "C:\Users\kryptiq-labs.dev\Desktop\J.S.W.A.T\Application", close all folders so the
+                                explorer is cleared up, then create a file called "config.env". This file will hold your
+                                application secrets and securely load them without leaving them vulnerable.</li>
+                            <li>This "config.env" file, if you are not already aware, will not be pushed to your Git
+                                repository because it has been mentioned in your ".gitignore" file. For that reason Git
+                                will not push your secrets and they will stay secure, in your own hands!</li>
+                            <li>Now navigate to the file called "APP-SECRETS.txt" and cut & paste it into your
+                                "config.env" file. </li>
+                            <li>
+                                J.S.W.A.T has already resolved the secrets file, if you require it in other files, you
+                                can import it.
+                            </li>
+                            <li>By now the dependency injection process has completed and we should now have two new
+                                items, a "node_modules" folder and a "package-lock.json". We should now be ready for
+                                deployment!</li>
+                        </ul>
+                    </ol>
+                </article>
+            </section>
+        </div>
+        <!-- /build -->
+
+
+
+        <!--deploy-local-->
+        <div class="w3-container" id="deployLocal" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Deploy & Open</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+                    <h3>It's time to run this project!</h3>
+                    <p>By now, you should have followed the guide successfully and your project explorer should look
+                        similar to the below image.</p>
+                    <p>If you are getting any errors, go back to the top and start again, CAREFULLY!</p>
+                    <p>Our last two commands we will be using are "npm start" and a *Wildcard ("Ctrl" + "C"). <br> These
+                        are to start and kill our server whenever it is required. Do take note that a monitoring tool
+                        has already been installed as a dependency, called "nodemon". This restarts your server whenerv
+                        any changes take place in your IDE/code.</p>
+                    <p>Start your local server with the command: <b class="w3-text-red">"npm start"</b>. <br>
+                        This will deploy the application to your local server on default PORT that is defined by
+                        J.S.W.A.T e.g. PORT:3000</p>
+                    <br>
+                    <code class="w3-white w3-text-black w3-card-4 w3-round w3-padding-large"
+                        style=" width: 600px; flex-wrap: wrap; ">
+                        C:\Users\kryptiq-labs.dev\Desktop\J.S.W.A.T\Application>npm start
+                    </code>
+                    <br>
+                    <p>You should see the following logs displayed in your terminal after a successful launch.</p>
+                    <br>
+                    <div class="w3-center" style="width: 800px;">
+                        <img class="w3-card-4 w3-round w3-margin" src="/Public/Images/app-guide-start.png" alt=""
+                            style="height: 340px; width: 100%;">
+                        </div>
+                    <br>
+                    <p>Great! Let's go check out the frontend. Navigate to your browser and type <a
+                            href="http://localhost:3000">http://localhost:3000</a> into your search bar.
+                    </p>
+                    <p>The resulting request you sent to your Node server should "GET" the landing page of your J.S.W.A.T
+                        Template as shown below:</p>
+
+                        <div class="w3-center" style="width: 800px;">
+                            <img class="w3-card-4 w3-round w3-margin" src="/Public/Images/app-guide-lander.png" alt=""
+                                style="height: 420px; width: 100%;">
+                            </div>
+                        <br>
+                </article>
+
+            </section>
+        </div>
+        <!-- /deploy-local -->
+
+
+
+        <!--happy-coding-->
+        <div class="w3-container" id="happyCoding" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>Happy Coding! <i class="fas fa-glasses fa-fw"></i> </b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+                    <h3>Hooray!!! You're LIVE!</h3>
+                    <p> You may adjust and change as you go, but read carefully where there are "tags" for tips.</p>
+                    <p>If you're up for some more learning, let's build our first J.S.W.A.T App!</p>
+                </article>
+            </section>
+        </div>
+        <!-- /happy-coding -->
+
+
+
+        <!--tutorial-->
+        <div class="w3-container" id="tutorial" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-green"><b>J.S.W.A.T Tutorial - Build a To-Do List</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <section>
+                <article class="w3-text-green">
+
+                    <ul>
+                        <li>
+                            <p>Here are a few key commands you will be using and what they are: </p>
+                        </li>
+                        <li>
+                            <p>The "npm" prefix is used to access the npm package manager instance.</p>
+                        </li>
+                        <li>
+                            <p>The "-i" prefix is used to install a package/dependency.</p>
+                        </li>
+                        <li>
+                            <p>The "-s" prefix is used to save a package/dependency when installing one.</p>
+                        </li>
+                        <li>
+                            <p>The complete command for installing a package/dependency is "npm -i -s [packageName]".
+                            </p>
+                        </li>
+                        <li>
+                            <p>The "start" prefix is used to start a project through node.js and npm on your local
+                                server.</p>
+                        </li>
+                        <li>
+                            <p>The complete command for starting your project on your local server is "npm start".</p>
+                        </li>
+                        <li>
+                            <p>There are more commands and prefixes to use on the npm website, for now, that's all we
+                                need.</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </div>
+        <!-- /tutorial-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- End page content -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- W3.CSS Container-footer -->
+    <div class="w3-container">
+
+        <!-- Footer -->
+        <footer class="w3-right w3-lime w3-padding-large"
+            style="margin-bottom: -24px; margin-right: -24px; width: 1060px; height: 100%;">
+            <!-- <a href="#banner" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a> -->
+            <!--SOCIAL-ICONS-SECTION-->
+            <div class="w3-xlarge w3-section w3-center">
+                <h4>Connect with us!</h4>
+                <a href=""><i
+                        class="fab fa-facebook w3-padding-small w3-text-blue w3-xxxlarge fx-scale fx-trans"></i></a>
+                <a href=""><i
+                        class="fab fa-instagram w3-padding-small w3-text-orange w3-xxxlarge fx-scale fx-trans"></i></a>
+                <a href="">
+                    <i class="fab fa-snapchat  w3-padding-small w3-text-yellow w3-xxxlarge fx-scale fx-trans"></i></a>
+                <a href="">
+                    <i class="fab fa-pinterest w3-padding-small w3-text-red w3-xxxlarge fx-scale fx-trans"></i>
+                </a>
+                <a href="">
+                    <i
+                        class="fab fa-twitter-square w3-padding-small w3-text-blue w3-xxxlarge fx-scale fx-trans"></i></a>
+                <a href=""><i class="fab fa-linkedin w3-padding-small w3-text-blue w3-xxxlarge fx-scale fx-trans"></i>
+                </a>
+            </div>
+            <p class="w3-center">Built by Kryptiq Labs South Africa &reg | &copy Copyright 2022</p>
+            <p class="w3-center">Powered by</p>
+            <a href="#" class="w3-padding-large w3-button w3-round w3-card-4 " style="margin-top: -200px;">Back To Top
+                <i class="fas fa-arrow-up-long fa-fw "></i></a>
+            <div class="w3-black w3-round w3-center">
+                <img src="" alt="" style="height: 40px; margin-top: -30px;"> <a href="#"
+                    class="w3-xlarge w3-text-green w3-padding-large"
+                    style="text-decoration: none; margin-top: -50px;">W3.CSS</a> <i
+                    class="fab fa-bootstrap w3-xxlarge w3-text-purple w3-padding-large"> </i> <i
+                    class="fab fa-js-square w3-xxlarge w3-text-yellow w3-padding-large"></i> <i
+                    class="fas fa-cloud w3-xxlarge w3-text-blue w3-padding-large"></i> <i
+                    class="fab fa-node w3-xxlarge w3-text-green w3-padding-large"></i> <a href="#"
+                    class="w3-xlarge w3-text-green w3-padding-large"
+                    style="text-decoration: none; margin-top: -50px;">EJS</a> <a href="#"
+                    class="w3-xlarge w3-text-green w3-padding-large"
+                    style="text-decoration: none; margin-top: -50px;">KL-Logo</a> <a href="#"
+                    class="w3-xlarge w3-text-green w3-padding-large"
+                    style="text-decoration: none; margin-top: -50px;"><img src="/assets/favicon/jswat-favicon.png"
+                        alt="" style="height: 60px;"></a>
+            </div>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>

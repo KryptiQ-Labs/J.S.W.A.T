@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The J.S.W.A.T Project | Home</title>
+    <!--metaData-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--favicon-->
+    <link rel="shortcut icon" href="/Public/Favicons/jswat-favicon.png" type="image/x-icon">
+    <!--W3-CSS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--Google-Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <!--Font-Awesome-Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background: linear-gradient(lime, purple);
+            min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        a:hover {
+            transition: all 250ms ease-in-out;
+        }
+
+        #team {
+            background: linear-gradient(lime, purple);
+        }
+
+        .fx-scale:hover {
+            transform: scale(1.2);
+            transition: all 250ms ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="w3-animate-top">
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card" id="myNavbar">
+            <a href="/Pages/index.html" class="w3-bar-item w3-button w3-wide">The J.S.W.A.T Open-Source Project <i
+                    class="fab fa-js-square fa-fw w3-padding-medium" style="font-size: 25px;"></i></a>
+
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+                <a href="#team" class="w3-bar-item w3-button"><i class="fas fa-users-rectangle fa-fw"></i> TEAM</a>
+                <a href="#features" class="w3-bar-item w3-button"><i class="fas fa-check-double fa-fw"></i> FEATURES</a>
+                <a href="/Pages/downloads.html" class="w3-bar-item w3-button"><i class="fas fa-download fa-fw"></i>
+                    DOWNLOAD</a>
+                <a href="/pages/docs.html" class="w3-bar-item w3-button"><i class="fas fa-book-bookmark fa-fw"></i>
+                    DOCS</a>
+                <a href="#support" class="w3-bar-item w3-button"><i class="fas fa-circle-question fa-fw"></i>
+                    SUPPORT</a>
+                <a href="#license" class="w3-bar-item w3-button"><i class="fas fa-book-atlas fa-fw"></i> LICENSE</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+            ×</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!--Banner-Header with full-height-->
+    <header class="banner bgimg-1 w3-display-container" id="home">
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span class="w3-jumbo w3-hide-small">Making JavaScript development environments simpler.</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Making JavaScript development environments
+                simpler.</span><br>
+            <span class="w3-large">Stop wasting valuable time with projects that just aren't for you.</span><br>
+            <span class="w3-large"><i><strong class="w3-text-black">J.W.S.A.T</strong> </i> runs on the V8 engine -
+                Node.js & the seamless templating engine - EJS, <br> the best JS technologies out there...</span>
+            <p><a href="#about"
+                    class="w3-button w3-round w3-card-4 w3-blue w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-purple">Find
+                    out more</a></p>
+        </div>
+
+        <div class="w3-display-right w3-text-white">
+            <img class="w3-round w3-card-4" src="/Public/Images/jswat-logo.png" alt=""
+                style="height: 300px; width: 400px; margin-top: 180px; margin-right: 100px;">
+        </div>
+    </header>
+
+
+
+    <!-- About Section -->
+    <div class="w3-container w3-black" style="padding:128px 16px" id="about">
+        <h3 class="w3-center">About J.S.W.A.T</h3>
+        <p class="w3-center w3-large">What is J.S.W.A.T?</p>
+        <p>What is the "J.S" for? "JavaScript?" Could be. How about "Just Simple," or "Just Smart"? J.S.W.A.T stands for
+            JavaScript Web Application Template. A simple web application template built ontop of Node.js and the EJS
+            templating language, allowing you to generate HTML markup with plain JavaScript. No need for constantly
+            creating development projects with clicks and clacks and all the nitty gritty! We know how to organize and
+            simplify things . No reinvention of the
+            wheel and control-flow. It's just plain JavaScript with a bit of fun!</p>
+        <div class="w3-row-padding w3-center" style="margin-top:64px">
+            <div class="w3-quarter">
+                <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+                <p class="w3-large">Responsive Execution</p>
+                <p>We know how fast the Chrome V8 engine and the other JavaScript runtimes have become. With EJS,
+                    caching is intermediate with JS functions for quick-paced execution and build time.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fab fa-js-square w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">A Passion for JS</p>
+                <p>We love JavaScript. It's a totally awesome, user-friendly programming language. Most templating
+                    languages and engines grow out to be complex and difficult to understand. Why not cut out the
+                    middle-man, and use J.S.W.A.T!</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fas fa-business-time w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Speedy Development Time</p>
+                <p>Don't waste time and efforts figuring out alien new syntax because of 'trends'. Learning how to
+                    pre-process your data and code so it will actually render right isn't easy when you're starting out
+                    with an empty folder and no direction.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fas fa-code w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Simple-Simon Syntax</p>
+                <p>Plain JavaScript code in simple, straightforward EJS scriptlet tags. Just write JavaScript that emits
+                    the HTML
+                    you want, and get the job done! EJS supports both ES5 & ES6 syntax.</p>
+            </div>
+        </div>
+        <div class="w3-row-padding w3-center" style="margin-top:64px">
+            <div class="w3-quarter">
+                <i class="fas fa-laptop-code w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Easy-Peasy Debugging</p>
+                <p>Debugging EJS: Debugging has never been so efficient and simple, your errors are displayed in plain
+                    JavaScript exceptions right inside your browser, with template
+                    line-numbers indicating the traceback region for your convenience.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fas fa-shapes w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">J.S.W.A.T-X <i class="fas fa-star fa-fw"></i> <span
+                        class="w3-badge w3-yellow">NEW!</span>
+                    <br>
+                    a pre-built, pre-designed component library</p>
+                <p>Using the best CSS3 libraries out there, Bootstrap & W3S have made frontend design even simpler and
+                    cleaner. We put together a clean, easy library that allows you to render a component with a single,
+                    simple "-Include" statement from EJS. No more messy classes for you!
+                </p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fas fa-database w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Supports Backend & Frontend Web Projects</p>
+                <p>An integrated JavaScript eco-system. No need to set up a backend. The template has it all done for
+                    you! Integrating with API's & other backend services will be a drift in the wind.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fab fa-sourcetree w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Open-Source</p>
+                <p>J.S.W.A.T is Free to use, modify and distribute. A lifetime solution All-In-One and ever-evolving.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="w3-container" style="padding:128px 16px" id="team">
+        <h3 class="w3-center">THE TEAM</h3>
+        <p class="w3-center w3-large">The ones who run this project</p>
+        <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card w3-center">
+                    <i class="fas fa-user-astronaut w3-margin" style="font-size: 60px;"></i>
+                    <!-- <img src="/w3images/team2.jpg" alt="John" style="width:100%"> -->
+                    <div class="w3-container">
+                        <h3>M.S Abrahams</h3>
+                        <p class="w3-opacity">Junior Developer & Founder</p>
+                        <p>The brains behind J.S.W.A.T and the heart of KryptiQ Labs S.A.</p>
+                        <p><a href="/Pages/contact-dev.html" class="w3-button w3-light-grey w3-block"><i
+                                    class="fa fa-envelope"></i>
+                                Contact</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card w3-center">
+                    <i class="fas fa-user-astronaut w3-margin" style="font-size: 60px;"></i>
+                    <!-- <img src="" alt="Jane" style="width:100%"> -->
+                    <div class="w3-container">
+                        <h3>Open Position</h3>
+                        <p class="w3-opacity">Any Role</p>
+                        <p>Join and contribute with KryptiQ Labs S.A and J.S.W.A.T.</p>
+                        <p><a href="/Pages/contact.html" class="w3-button w3-light-grey w3-block"><i
+                                    class="fa fa-envelope"></i>
+                                I'm interested!</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card w3-center">
+                    <i class="fas fa-user-astronaut w3-margin" style="font-size: 60px;"></i>
+                    <!-- <img src="" alt="Mike" style="width:100%"> -->
+                    <div class="w3-container">
+                        <h3>Open Position</h3>
+                        <p class="w3-opacity">Any Role</p>
+                        <p>Join and contribute with KryptiQ Labs S.A and J.S.W.A.T.</p>
+                        <p><a href="/Pages/contact.html" class="w3-button w3-light-grey w3-block"><i
+                                    class="fa fa-envelope"></i>
+                                I'm interested!</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-card w3-center">
+                    <i class="fas fa-user-astronaut w3-margin" style="font-size: 60px;"></i>
+                    <!-- <img src="/w3images/team4.jpg" alt="Dan" style="width:100%"> -->
+                    <div class="w3-container">
+                        <h3>Open Position</h3>
+                        <p class="w3-opacity">Any Role</p>
+                        <p>Join and contribute with KryptiQ Labs S.A and J.S.W.A.T.</p>
+                        <p><a href="/Pages/contact.html" class="w3-button w3-light-grey w3-block"><i
+                                    class="fa fa-envelope"></i>
+                                I'm interested!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="w3-container w3-padding-64 w3-dark-grey w3-center" id="features">
+        <h1 class="w3-jumbo"><b>Features</b></h1>
+        <p class="w3-xlarge">Key features of J.S.W.A.T.</p>
+
+        <div class="w3-row" style="margin-top:64px">
+            <div class="w3-col s3">
+                <i class="fa fa-bolt w3-text-orange w3-jumbo"></i>
+                <p>Quick-paced build, compilation and render time</p>
+            </div>
+            <div class="w3-col s3">
+                <i class="fa fa-heart w3-text-red w3-jumbo"></i>
+                <p>Built & designed with <i class="fas fa-heart fa-fw w3-text-red"></i> in the Republic of South Africa.
+                </p>
+            </div>
+            <div class="w3-col s3">
+                <i class="fas fa-shapes w3-text-yellow w3-jumbo"></i>
+                <p>Components dynamically rendered as "partial views". Supports import & export concepts with the
+                    magical statement: <br>
+                    <span class="w3-text-black"> "<% -include("component_name") %>" </span></p>
+            </div>
+            <div class="w3-col s3">
+                <i class="fa fa-battery-full w3-text-green w3-jumbo"></i>
+                <p>Efficient on power & memory consumption and CPU usage.</p>
+            </div>
+        </div>
+
+        <div class="w3-row" style="margin-top:64px">
+            <div class="w3-col s3">
+                <i class="fa fa-diamond w3-text-white w3-jumbo"></i>
+                <p>Simplicity with EJS template tags & custom delimeters: <br>
+                    <span class="w3-text-black"> Use "[? ?]" instead of "<% %>" </span></p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-cloud w3-text-blue w3-jumbo"></i>
+        <p>A Cloud-first, Cloud-friendly approach</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-globe w3-text-amber w3-jumbo"></i>
+        <p>Fully integrated server and browser support</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fas fa-memory w3-text-cyan w3-jumbo"></i>
+        <p>Static caching of intermediate JavaScript and templates.</p>
+      </div>
+    </div>
+    
+    <div class="w3-row" style="margin-top:64px">
+      <div class="w3-col s3">
+        <i class="fa fa-user w3-text-sand w3-jumbo"></i>
+        <p>User-friendly</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-shield w3-text-orange w3-jumbo"></i>
+        <p>Secure & Stable</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-wifi w3-text-green w3-jumbo"></i>
+        <p>Connected</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fas fa-images w3-text-pink w3-jumbo"></i>
+        <p>Seameless rendering</p>
+      </div>
+    </div>
+  </div>
+
+           <!--Support Section-->
+           <div class="w3-container w3-black w3-center" style="padding:60px 16px" id="support">
+            <h3 class="w3-center">Support, Github & Issues</h3>
+            <p>Feel free to mail us at kryptiqlabs.dev@gmail.com for any enquiries or suggestions.</p>
+            <p>J.S.W.A.T's <a href="">issue tracker</a> on Github is the preferred channel for bug reports, features requests, forking and submitting pull requests.</p>
+            <br>
+            <div class="w3-center" style="display: inline-flex;">
+                <a href="/Pages/report-issues.html">
+                    <i class="fas fa-envelope fa-fw w3-jumbo fx-scale"></i></a>
+                <i class="fas fa-arrow-right-arrow-left fa-fw w3-jumbo"></i>
+                <a href="#"><i class="fab fa-github-square fa-fw w3-jumbo fx-scale"></i></a>
+            </div>
+       </div>
+
+        <!--License Section-->
+        <div class="w3-container w3-black w3-center" style="padding:60px 16px" id="license">
+            <h3 class="w3-center">License</h3>
+            <p>J.S.W.A.T is licensed under the open-source MIT license, which is licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. Information on the MIT license can found here: <a href="https://choosealicense.com/">https://choosealicense.com/</a>.</p>
+            <br>
+            <i class="fas fa-book-atlas fa-fw w3-jumbo"></i>
+       </div>
+
+
+
+
+       
+
+<!-- Footer -->
+<footer class="w3-center w3-lime w3-padding-large">
+    <!-- <a href="#banner" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a> -->
+     <!--SOCIAL-ICONS-SECTION-->
+     <div class="w3-xlarge w3-section">
+        <h4>Connect with us!</h4>
+        <a href=""><i class="fab fa-facebook w3-padding-small w3-text-blue w3-xxxlarge fx-scale fx-trans"></i></a>
+        <a href=""><i
+                class="fab fa-instagram w3-padding-small w3-text-orange w3-xxxlarge fx-scale fx-trans"></i></a>
+        <a href="">
+            <i class="fab fa-snapchat  w3-padding-small w3-text-yellow w3-xxxlarge fx-scale fx-trans"></i></a>
+        <a href="">
+            <i class="fab fa-pinterest w3-padding-small w3-text-red w3-xxxlarge fx-scale fx-trans"></i>
+        </a>
+        <a href="">
+            <i class="fab fa-twitter-square w3-padding-small w3-text-blue w3-xxxlarge fx-scale fx-trans"></i></a>
+        <a href=""><i class="fab fa-linkedin w3-padding-small w3-text-blue w3-xxxlarge fx-scale fx-trans"></i>
+        </a>
+    </div>
+    <p>Built by Kryptiq Labs South Africa &reg | &copy Copyright 2022</p>
+    <div class="w3-text-red">
+        <a class="w3-margin" href="/Pages/privacy-policy.html">Privacy Policy</a>
+        <a class="w3-margin" href="/Pages/terms-of-service.html">Terms & Conditions</a>
+    </div>
+    <p>Powered by</p>
+    <a href="#" class="w3-left w3-padding-large w3-button w3-round w3-card-4 " style="margin-top: -200px;">Back To Top <i class="fas fa-arrow-up-long fa-fw "></i></a>
+    <div class="w3-black w3-round">
+       <img src="" alt="" style="height: 40px; margin-top: -30px;"> <a href="#" class="w3-xlarge w3-text-green w3-padding-large" style="text-decoration: none; margin-top: -50px;">W3.CSS</a> <i class="fab fa-bootstrap w3-xxlarge w3-text-purple w3-padding-large"> </i> <i class="fab fa-js-square w3-xxlarge w3-text-yellow w3-padding-large"></i> <i class="fas fa-cloud w3-xxlarge w3-text-blue w3-padding-large"></i> <i class="fab fa-node w3-xxlarge w3-text-green w3-padding-large"></i> <a href="#" class="w3-xlarge w3-text-green w3-padding-large" style="text-decoration: none; margin-top: -50px;">EJS</a> <a href="#" class="w3-xlarge w3-text-green w3-padding-large" style="text-decoration: none; margin-top: -50px;">KL-Logo</a> <a href="#" class="w3-xlarge w3-text-green w3-padding-large" style="text-decoration: none; margin-top: -50px;"><img src="/assets/favicon/jswat-favicon.png" alt="" style="height: 60px;"></a>   
+    </div>
+    
+  </footer>
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
